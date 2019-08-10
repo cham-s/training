@@ -28,10 +28,34 @@ void	add_node(t_node **list, int value)
 	}
 }
 
+void	print_list(t_node **list)
+{
+	t_node *tmp = *list;
+	int passed = 0;
+	if (!passed)
+	{
+		printf("value(s): ");
+		passed = 1;
+	}
+	while (tmp != NULL)
+	{
+		printf("%d", tmp->data);
+		if (tmp->next != NULL)
+			printf(" ");
+		else
+			printf("\n");
+		tmp = tmp->next;
+	}
+}
+
 
 int main()
 {
 	t_node *list = NULL;
 	add_node(&list, 5);
-	printf("value: %d\n", list->data);
+	add_node(&list, 5);
+	add_node(&list, 5);
+	add_node(&list, 5);
+	add_node(&list, 5);
+	print_list(&list);
 }
