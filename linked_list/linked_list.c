@@ -102,12 +102,8 @@ int main()
 	print_list(&list);
 	delete_node(&list, 0);
 	print_list(&list);
-	delete_node(&list, 0);
+	delete_node(&list, 1);
 	print_list(&list);
-	delete_node(&list, 0);
-	print_list(&list);
-	delete_node(&list, 0);
-	print_list(&list);
-	delete_node(&list, 0);
+	delete_node(&list, 14);
 	print_list(&list);
 }
